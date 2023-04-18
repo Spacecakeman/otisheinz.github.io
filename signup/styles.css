@@ -169,4 +169,16 @@ p {
         z-index: -1;
     }
 
+    .form h1 {
+        color: white;
+        font-size: 0.5rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.4rem;
+    }
+
 }
