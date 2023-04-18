@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" { overflow-y: scroll; }>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="
+https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js
+"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Varela Round', sans-serif;
+            color: white;
+            background: #202731;
+            overflow-x: hidden;
+
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .blue {
+            background: #3c31dd;
+        }
+
+        .red {
+            background: #dd3f31;
+        }
+
+        .pink {
+            background: #ff0066;
+        }
+
+        .green {
+            background: #00ff7b;
+        }
+
+        .dark {
+            background: #0f0f10;
+        }
+
+        .curve {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve::before {
+            content: '';
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%, 60%);
+        }
+
+        .curve::after {
+            content: '';
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background: #00ff7b;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(138% + 1.3px);
+            height: 117px;
+        }
+
+        .wave .shape-fill {
+            fill: #00ff7b;
+        }
+
+        .spacer {
+            aspect-ratio: 900/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .layer1 {
+            background-image: url('./layered-waves-haikei.svg');
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="green">
+        <h1>Nice Curves</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae iusto quas culpa tempora, voluptate
+            corrupti beatae delectus nulla unde nihil nesciunt, voluptatem expedita eum vero aliquid harum quam facere
+            similique?</p>
+    </section>
+    <section section class="red">
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <h1>Nice Curves</h1>
+        <p>Ipsum illo itaque non, corporis labore unde dolorem repudiandae quae magni similique exercitationem ad,
+            nostrum minima animi porro illum a suscipit excepturi, soluta veritatis sapiente? Vel sed necessitatibus ad
+            praesentium.</p>
+    </section>
+
+    <div class="spacer layer1"></div>
+
+    <section section class="dark">
+        <h1>Nice Curves</h1>
+        <p>Ipsum illo itaque non, corporis labore unde dolorem repudiandae quae magni similique exercitationem ad,
+            nostrum minima animi porro illum a suscipit excepturi, soluta veritatis sapiente? Vel sed necessitatibus ad
+            praesentium.</p>
+        <svg id="visual" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(451.271660435465 167.33066337180912)">
+                <path id="blob1"
+                    d="M80.7 -79.5C104.4 -57 123.2 -28.5 117.8 -5.4C112.3 17.7 82.7 35.4 59 51C35.4 66.7 17.7 80.3 -0.9 81.3C-19.6 82.2 -39.1 70.5 -64.1 54.8C-89.1 39.1 -119.6 19.6 -121.2 -1.6C-122.9 -22.9 -95.7 -45.7 -70.7 -68.2C-45.7 -90.7 -22.9 -112.9 2.8 -115.7C28.5 -118.5 57 -102 80.7 -79.5"
+                    fill="#91fe95"></path>
+            </g>
+            <g transform="translate(435.5818343988698 167.65995129109956)"><path id="blob2" d="M65.3 -66.9C88.1 -42.4 112.5 -21.2 117.3 4.7C122 30.6 106.9 61.3 84.1 74.4C61.3 87.6 30.6 83.3 -2.4 85.7C-35.4 88 -70.7 97 -83.2 83.9C-95.7 70.7 -85.4 35.4 -84.1 1.3C-82.8 -32.8 -90.5 -65.5 -78 -90C-65.5 -114.5 -32.8 -130.8 -5.8 -125C21.2 -119.2 42.4 -91.4 65.3 -66.9" fill="#91fe95" style="visibility: hidden"></path></g>
+        </svg>
+        <script>
+            const tween = KUTE.fromTo(
+                '#blob1',
+                { path: 'blob1' },
+                { path: 'blob2' },
+                { repeat: 999, duration: 3000, yoy: true }
+            )
+
+            tween.start()
+
+        </script>
+    </section>
+
+    <div class="spacer layer1 flip"></div>
+
+    <section section class="red">
+        <h1>Nice Curves</h1>
+        <p>Ipsum illo itaque non, corporis labore unde dolorem repudiandae quae magni similique exercitationem ad,
+            nostrum minima animi porro illum a suscipit excepturi, soluta veritatis sapiente? Vel sed necessitatibus ad
+            praesentium.</p>
+    </section>
+
+</body>
+
+</html>
